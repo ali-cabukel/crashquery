@@ -1,0 +1,124 @@
+table_name,field_name,code,label
+*,*,-1,Data missing or out of range
+collisions,accident_severity,1,Fatal
+collisions,accident_severity,2,Serious
+collisions,accident_severity,3,Slight
+casualties,casualty_severity,1,Fatal
+casualties,casualty_severity,2,Serious
+casualties,casualty_severity,3,Slight
+collisions,day_of_week,1,Sunday
+collisions,day_of_week,2,Monday
+collisions,day_of_week,3,Tuesday
+collisions,day_of_week,4,Wednesday
+collisions,day_of_week,5,Thursday
+collisions,day_of_week,6,Friday
+collisions,day_of_week,7,Saturday
+collisions,urban_or_rural_area,1,Urban
+collisions,urban_or_rural_area,2,Rural
+collisions,urban_or_rural_area,3,Unallocated
+collisions,road_type,1,Roundabout
+collisions,road_type,2,One way street
+collisions,road_type,3,Dual carriageway
+collisions,road_type,6,Single carriageway
+collisions,road_type,7,Slip road
+collisions,road_type,9,Unknown
+collisions,road_type,12,One way street or slip road
+collisions,first_road_class,1,Motorway
+collisions,first_road_class,2,A(M)
+collisions,first_road_class,3,A
+collisions,first_road_class,4,B
+collisions,first_road_class,5,C
+collisions,first_road_class,6,Unclassified
+collisions,light_conditions,1,Daylight
+collisions,light_conditions,4,Darkness - lights lit
+collisions,light_conditions,5,Darkness - lights unlit
+collisions,light_conditions,6,Darkness - no lighting
+collisions,light_conditions,7,Darkness - lighting unknown
+collisions,weather_conditions,1,Fine no high winds
+collisions,weather_conditions,2,Raining no high winds
+collisions,weather_conditions,3,Snowing no high winds
+collisions,weather_conditions,4,Fine + high winds
+collisions,weather_conditions,5,Raining + high winds
+collisions,weather_conditions,6,Snowing + high winds
+collisions,weather_conditions,7,Fog or mist
+collisions,weather_conditions,8,Other
+collisions,weather_conditions,9,Unknown
+collisions,road_surface_conditions,1,Dry
+collisions,road_surface_conditions,2,Wet or damp
+collisions,road_surface_conditions,3,Snow
+collisions,road_surface_conditions,4,Frost or ice
+collisions,road_surface_conditions,5,Flood over 3cm deep
+collisions,road_surface_conditions,6,Oil or diesel
+collisions,road_surface_conditions,7,Mud
+collisions,junction_detail,0,Not at junction or within 20 metres
+collisions,junction_detail,1,Roundabout
+collisions,junction_detail,2,Mini-roundabout
+collisions,junction_detail,3,T or staggered junction
+collisions,junction_detail,5,Slip road
+collisions,junction_detail,6,Crossroads
+collisions,junction_detail,7,More than 4 arms (not roundabout)
+collisions,junction_detail,8,Private drive or entrance
+collisions,junction_detail,9,Other junction
+collisions,junction_control,0,Not at junction or within 20 metres
+collisions,junction_control,1,Authorised person
+collisions,junction_control,2,Auto traffic signal
+collisions,junction_control,3,Stop sign
+collisions,junction_control,4,Give way or uncontrolled
+collisions,did_police_officer_attend_scene_of_accident,1,Yes
+collisions,did_police_officer_attend_scene_of_accident,2,No
+collisions,did_police_officer_attend_scene_of_accident,3,No - accident was reported using a self completion form
+vehicles,sex_of_driver,1,Male
+vehicles,sex_of_driver,2,Female
+vehicles,sex_of_driver,3,Not known
+casualties,sex_of_casualty,1,Male
+casualties,sex_of_casualty,2,Female
+casualties,sex_of_casualty,3,Not known
+casualties,casualty_class,1,Driver or rider
+casualties,casualty_class,2,Passenger
+casualties,casualty_class,3,Pedestrian
+vehicles,vehicle_type,1,Pedal cycle
+vehicles,vehicle_type,2,Motorcycle 50cc and under
+vehicles,vehicle_type,3,Motorcycle 125cc and under
+vehicles,vehicle_type,4,Motorcycle over 125cc and up to 500cc
+vehicles,vehicle_type,5,Motorcycle over 500cc
+vehicles,vehicle_type,8,Taxi or private hire car
+vehicles,vehicle_type,9,Car
+vehicles,vehicle_type,10,Minibus (8 - 16 passenger seats)
+vehicles,vehicle_type,11,Bus or coach (17 or more passenger seats)
+vehicles,vehicle_type,16,Ridden horse
+vehicles,vehicle_type,17,Agricultural vehicle
+vehicles,vehicle_type,18,Tram
+vehicles,vehicle_type,19,Van or goods vehicle 3.5 tonnes mgw or under
+vehicles,vehicle_type,20,Goods vehicle over 3.5t and under 7.5t
+vehicles,vehicle_type,21,Goods vehicle 7.5 tonnes mgw and over
+vehicles,vehicle_type,22,Mobility scooter
+vehicles,vehicle_type,23,Electric motorcycle
+vehicles,vehicle_type,90,Other vehicle
+vehicles,vehicle_type,97,Motorcycle - unknown cc
+vehicles,vehicle_type,98,Goods vehicle - unknown weight
+vehicles,age_band_of_driver,1,0 - 5
+vehicles,age_band_of_driver,2,6 - 10
+vehicles,age_band_of_driver,3,11 - 15
+vehicles,age_band_of_driver,4,16 - 20
+vehicles,age_band_of_driver,5,21 - 25
+vehicles,age_band_of_driver,6,26 - 35
+vehicles,age_band_of_driver,7,36 - 45
+vehicles,age_band_of_driver,8,46 - 55
+vehicles,age_band_of_driver,9,56 - 65
+vehicles,age_band_of_driver,10,66 - 75
+vehicles,age_band_of_driver,11,Over 75
+casualties,age_band_of_casualty,1,0 - 5
+casualties,age_band_of_casualty,2,6 - 10
+casualties,age_band_of_casualty,3,11 - 15
+casualties,age_band_of_casualty,4,16 - 20
+casualties,age_band_of_casualty,5,21 - 25
+casualties,age_band_of_casualty,6,26 - 35
+casualties,age_band_of_casualty,7,36 - 45
+casualties,age_band_of_casualty,8,46 - 55
+casualties,age_band_of_casualty,9,56 - 65
+casualties,age_band_of_casualty,10,66 - 75
+casualties,age_band_of_casualty,11,Over 75
+casualties,casualty_imd_decile,1,Most deprived 10%
+casualties,casualty_imd_decile,10,Least deprived 10%
+vehicles,driver_imd_decile,1,Most deprived 10%
+vehicles,driver_imd_decile,10,Least deprived 10%

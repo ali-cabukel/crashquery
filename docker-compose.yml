@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:16
+    container_name: road-safety-db
+    environment:
+      POSTGRES_USER: rsa_owner
+      POSTGRES_PASSWORD: rsa_owner_pw
+      POSTGRES_DB: road_safety
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rsa_owner -d road_safety"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    # STATS19 loads are COPY-heavy and single-shot. These settings trade
+    # crash-safety for load speed, which is the right call for a rebuildable
+    # analytics database. Do not copy them into anything transactional.
+    command: >
+      postgres
+      -c shared_buffers=512MB
+      -c work_mem=32MB
+      -c maintenance_work_mem=512MB
+      -c synchronous_commit=off
+
+volumes:
+  pgdata:
