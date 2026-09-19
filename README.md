@@ -11,17 +11,25 @@ Source: https://www.gov.uk/government/statistics/road-safety-data
 
 ```bash
 cp .env.example .env          # add your ANTHROPIC_API_KEY
-docker compose up -d          # Postgres on :5433, roles created on first boot
+docker compose up -d --build  # Postgres on :5433, plus the crashquery image
 
+docker compose run --rm crashquery download --from-year 2019 --to-year 2023
+docker compose run --rm crashquery load --from-year 2019 --to-year 2023
+
+docker compose run --rm crashquery check
+docker compose run --rm crashquery ask "How many people were killed on the roads in 2022?"
+docker compose run --rm crashquery chat
+docker compose run --rm crashquery tui
+```
+
+The container talks to Postgres on the Compose network (`db:5432`). Host
+`poetry` runs still use `localhost:5433` from `.env.example`.
+
+```bash
 poetry install
-
-poetry run crashquery download --from-year 2019 --to-year 2023
-poetry run crashquery load --from-year 2019 --to-year 2023
 
 poetry run crashquery check
 poetry run crashquery ask "How many people were killed on the roads in 2022?"
-poetry run crashquery chat
-poetry run crashquery tui
 ```
 
 `poetry run python -m crashquery` is equivalent to `poetry run crashquery`.
